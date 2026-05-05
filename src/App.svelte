@@ -27,13 +27,13 @@
 
 	let active = "Donut/Pie";
 
-	onMount(async () => {
+	onMount(() => {
 		initAppEvents();
 
-		scrollView = await document.querySelector(".app__data-scroll");
-		let zeroItem = await document.querySelector(".app__data-item--0");
+		scrollView = document.querySelector(".app__data-scroll");
+		let zeroItem = document.querySelector(".app__data-item--0");
 
-		await observeFirstChartItem(zeroItem);
+		observeFirstChartItem(zeroItem);
 	});
 
 	$: viewBoxSize = $Radius.outer * 2;
